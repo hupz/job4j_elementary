@@ -6,11 +6,10 @@ public class CheckPrimeNumber {
         for (int num = 2; num <= number - 1; num++) {
             if ((number % num) == 0) {
                     break;
-            }
-            else {
+            } else {
                 prime = true;
             }
-            }
+        }
         return prime;
     }
 }
