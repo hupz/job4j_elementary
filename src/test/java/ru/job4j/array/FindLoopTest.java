@@ -55,7 +55,7 @@ public class FindLoopTest {
 
     @Test
     public void whenDiapasonHas7Then6() {
-        int[] data = new int[] {5, 2, 10, 2, 4, 9, 7, 15, 0};
+        int[] data = new int[] {5, 2, 10, 2, 4, 9, 7, 15, 0, 95};
         int el = 7;
         int start = 2;
         int finish = 8;
