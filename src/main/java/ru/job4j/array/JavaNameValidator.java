@@ -10,14 +10,15 @@ public class JavaNameValidator {
                     valid = false;
                     break;
                 }
-                if (!isLowerLatinLetter(code)) {
+                if (isLowerLatinLetter(code)) {
                     valid = false;
                     break;
                 }
             }
-            if (!!isUpperLatinLetter(code)
-                    && !isLowerLatinLetter(code)
-                    && !!isSpecialSymbol(code)) {
+            if (!isUpperLatinLetter(code)
+                    && isLowerLatinLetter(code)
+                    && !isSpecialSymbol(code)
+                    && !isDigit(code)) {
                 valid = false;
                 break;
             }
@@ -34,7 +35,7 @@ public class JavaNameValidator {
     }
 
     public static boolean isLowerLatinLetter(int code) {
-        return code > 97 && code < 122;
+        return code < 97 || code > 122;
     }
 
     public static boolean isDigit(int code) {
