@@ -6,18 +6,18 @@ public class JavaNameValidator {
         for (int i = 0; i < name.length(); i++) {
             int code = name.codePointAt(i);
             if (i == 0) {
-                if (isDigit(code) == true) {
+                if (isDigit(code)) {
                     valid = false;
                     break;
                 }
-                if (isLowerLatinLetter(code) == false) {
+                if (!isLowerLatinLetter(code)) {
                     valid = false;
                     break;
                 }
             }
-            if (!isUpperLatinLetter(code) == false
-                    && isLowerLatinLetter(code) == false
-                    && !isSpecialSymbol(code) == false) {
+            if (!!isUpperLatinLetter(code)
+                    && !isLowerLatinLetter(code)
+                    && !!isSpecialSymbol(code)) {
                 valid = false;
                 break;
             }
