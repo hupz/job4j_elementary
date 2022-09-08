@@ -5,11 +5,8 @@ public class JavaNameValidator {
         boolean valid = isEmpty(name);
         if (valid) {
             int code = name.codePointAt(0);
-            if (isDigit(code)) {
-                return false;
-            }
-            if (isUpperLatinLetter(code)) {
-                return false;
+            if (isDigit(code) | isUpperLatinLetter(code)) {
+                valid = false;
             }
         }
             if (valid) {
