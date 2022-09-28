@@ -40,4 +40,13 @@ public class PointTest {
         Assert.assertEquals(expected, out, 0.01);
     }
 
+    @Test
+    public void when434to224then2dot23() {
+        double expected = 2.23;
+        Point point = new Point(4, 3, 4);
+        Point point1 = new Point(2, 2, 4);
+        double out = point.distance3d(point1);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
 }
